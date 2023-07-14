@@ -1,0 +1,110 @@
+.help {
+   padding-bottom: 92px;
+   .subtitle {
+      height: 124px;
+   }
+   &__subtitle {
+      margin-top: -26px;
+      height: 52px !important;
+      font-family: var(--font-family-New);
+      color: transparent;
+      -webkit-text-stroke: 1px var(--blue);
+      margin-bottom: 23px;
+   }
+   hr {
+      height: 2px;
+      background-color: var(--blue);
+      border: none;
+      margin: 0;
+   }
+   &__list {
+      display: grid;
+      grid-template-columns: 0.22fr 0.78fr 1fr;
+      &__number {
+         margin-top: 44px;
+         margin-right: 23px;
+         font-family: var(--font-family-New);
+         font-weight: 600;
+         font-size: 48px;
+         line-height: 110%;
+         color: transparent;
+         -webkit-text-stroke: 1px var(--blue);
+      }
+      &__title {
+         max-width: 440px;
+         margin-top: 51px;
+         font-weight: 600;
+         font-size: 24px;
+         line-height: 30px;
+         color: var(--blue);
+      }
+      &__text {
+         max-width: 560px;
+         margin-top: 89px;
+         margin-bottom: 19px;
+         font-family: var(--font-family-New);
+         font-weight: 400;
+         font-size: 20px;
+         line-height: 28px;
+         color: var(--black-blue);
+      }
+   }
+}
+
+@media (max-width: 1130px) {
+   .help {
+      padding: 0 20px;
+   }
+}
+
+@media (max-width: 768px) {
+   .help {
+      background-color: var(--blue);
+      border-radius: 20px 0px 0px 0px;
+      padding-bottom: 48px;
+      hr {
+         background-color: var(--black-blue);
+         height: 1px;
+      }
+      .subtitle {
+         height: 48px;
+         color: var(--grey);
+      }
+      &__subtitle {
+         font-size: 20px;
+         line-height: 25px;
+         margin-bottom: 20px;
+      }
+      &__list {
+         grid-template-columns: repeat(2, 1fr);
+         grid-template-areas: "title title"
+                              "number text";
+         &__number {
+            margin-top: 56px;
+            grid-area: number;
+            font-size: 24px;
+            line-height: 30px;
+            -webkit-text-stroke: 1px var(--black-blue);
+         }
+         &__title {
+            margin-top: 15px;
+            grid-area: title;
+            font-size: 13px;
+            line-height: 16px;
+            color: var(--grey);
+         }
+         &__text {
+            margin-top: 16px;
+            margin-bottom: 17px;
+            grid-area: text;
+            font-size: 11px;
+            line-height: 15px;
+            color: var(--grey);
+         }
+      }
+   }
+   .help__subtitle {
+      color: transparent !important;
+      -webkit-text-stroke: 1px var(--grey);
+   }
+}

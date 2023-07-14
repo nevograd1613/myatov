@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      @include('partials/hero.html')
+      @include('partials/abouth.html')
+      @include('partials/reserch.html')
+      @include('partials/activity.html')
+      @include('partials/help.html')
+      <div id="dialog-content" style="display:none;max-width:500px;">
+         <picture>
+           <source srcset="img/groupLection.avif" type="image/avif">
+           <source srcset="img/groupLection.webp" type="image/webp">
+           <img loading="lazy" src="img/groupLection.jpg" class="image" width="" height="" alt="">
+         </picture>
+       </div>
+    </main>
+    @include('partials/footer.html')
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+</body>
+
+</html>

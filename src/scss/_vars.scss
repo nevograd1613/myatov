@@ -1,0 +1,17 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family-New: "NewHero", sans-serif;
+  --font-family-Und: "Unbounded", sans-serif;
+  --content-width: 1130px;
+  --container-offset: 0px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --light-color: #fff;
+  --grey: #F7F7F8;
+  --blue: #293BCA;
+  --black-blue: #0E0047;
+
+}

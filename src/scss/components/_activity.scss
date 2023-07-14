@@ -1,0 +1,112 @@
+.activity {
+   background-color: #fff;
+   padding-bottom: 61px;
+   .subtitle {
+      height: 157px;
+   }
+   &__wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(1, 510px);
+      gap: 24.5px;
+   }
+   &__item {
+      display: flex;
+      flex-direction: column;
+      border: 2px solid var(--blue);
+      border-radius: 6px;
+      transition: all 0.1s ease-out;
+      &:hover {
+         background-color: var(--blue);
+         .activity__item_title {
+            color: var(--grey);
+         }
+         .activity__item_text {
+            color: var(--grey);
+         }
+         a {
+            color: var(--grey);
+            border: 2px solid var(--grey);
+         }
+      }
+      &_title {
+         padding: 96px 12px 0px 23px;
+         font-weight: 600;
+         font-size: 24px;
+         line-height: 30px;
+         color: var(--blue);
+      }
+      &_text {
+         padding: 0px 12px 0px 23px;
+         font-family: 'NewHero';
+         font-style: normal;
+         font-weight: 400;
+         font-size: 20px;
+         line-height: 28px;
+         color: var(--black-blue);
+      }
+      &_btn {
+         padding-bottom: 77px;
+         font-weight: 400;
+         font-size: 24px;
+         line-height: 30px;
+         display: flex;
+         align-items: end;
+         justify-content: center;
+         flex-grow: 1;
+         a {
+            color: var(--blue);
+            padding: 6.5px 67px;
+            border: 2px solid var(--blue);
+            border-radius: 30px;
+            transition: all 0.1s ease-out;
+            &:hover {
+               background-color: var(--grey);
+               color: var(--blue);
+            }
+         }
+      }
+   }
+}
+
+@media (max-width: 1130px) {
+   .activity {
+      &__wrapper {
+         padding: 0 20px;
+         grid-template-columns: repeat(2, 1fr);
+         grid-template-rows: repeat(2, 510px);
+      }
+   }
+}
+
+@media (max-width: 768px) {
+   .activity {
+      .subtitle {
+         height: 79px;
+      }
+      &__item {
+         &_title {
+            padding: 16px;
+            text-align: center;
+            font-size: 13px;
+            line-height: 16px;
+         }
+         &_text {
+            font-size: 11px;
+            line-height: 14px;
+            text-align: center;
+         }
+         &_btn {
+            padding-top: 16px;
+            font-size: 13px;
+            line-height: 16px;
+            padding-bottom: 16px;
+         }
+      }
+      &__wrapper {
+         gap: 16px;
+         grid-template-columns: repeat(1, 1fr);
+         grid-template-rows: repeat(3, 1fr);
+      }
+   }
+}

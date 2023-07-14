@@ -1,0 +1,87 @@
+.abouth {
+   position: relative;
+   z-index: 10;
+   background-color: #fff;
+   padding-bottom: 32px;
+   &__img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+   }
+   .subtitle {
+      padding-top: 32px;
+   }
+   &__wrapper {
+      &.active {
+         .abouth__title {
+            color: var(--black-blue);
+            &::after {
+               transform: rotate(0deg);
+            }
+         }
+      }
+   }
+   &__title {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 30px;
+      color: var(--blue);
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+      transition: all 0.3s ease-out;
+      margin-top: 25px;
+      &::after {
+         content: url("../../img/svg/Icon/Path 3.svg");
+         transform: rotate(180deg);
+         transition: all 0.3s ease-out;
+      }
+   }
+   &__list {
+      margin-bottom: 25px;
+      display: none;
+      transition: all 0.3s ease-out;
+   }
+   &__item {
+      font-family: 'NewHero';
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 30px;
+      color: #0B0037;
+   }
+   hr {
+      height: 2px;
+      background-color: var(--blue);
+      border: none;
+      margin: 7px 0;
+   }
+}
+
+@media (max-width: 1130px) {
+   .abouth {
+      padding: 0 20px;
+   }
+}
+
+@media (max-width: 768px) {
+   .abouth {
+      .subtitle {
+         height: 32px;
+      }
+      &__list {
+         margin: 0;
+         padding: 7px 0 16px 16px;
+      }
+      &__title {
+         margin-top: 16px;
+         font-size: 13px;
+         line-height: 16px;
+      }
+      &__item {
+         font-size: 11px;
+         line-height: 15px;
+      }
+   }
+}
